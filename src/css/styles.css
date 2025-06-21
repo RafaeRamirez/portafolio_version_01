@@ -1,0 +1,312 @@
+/* ===== Reset Básico ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Variables de Color ===== */
+:root {
+  --azul-claro: #e6f8fb;
+  --azul-movistar: #00B3E3;
+  --azul-oscuro: #0078A6;
+  --blanco: #ffffff;
+  --gris-suave: #f9f9f9;
+  --negro: #000000;
+}
+
+/* ===== Body ===== */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: var(--azul-oscuro);
+  color: var(--negro);
+  line-height: 1.6;
+  padding: 20px;
+  background-image: url('/de/tu/imagen.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ===== Contenedor principal ===== */
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===== Menú ===== */
+.menu {
+  background-color: var(--azul-oscuro);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.menu nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu nav a:hover {
+  text-decoration: underline;
+}
+
+.menu h1 {
+  margin-top: 10px;
+  font-size: 1.8em;
+}
+
+
+.menu img {
+  width: 20%;
+  height: auto;
+
+  object-fit: cover;
+  display: block;
+  animation: fadeZoomIn 13s ease forwards;
+  opacity: 0;
+}
+
+/* ===== Secciones ===== */
+section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Animación entrada ===== */
+@keyframes fadeZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ===== Imágenes ===== */
+section img,
+.articulo1 img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 8px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  animation: fadeZoomIn 1s ease forwards;
+  opacity: 0;
+}
+
+section img:hover,
+.articulo1 img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 179, 227, 0.4);
+}
+
+/* ===== Tabla de Proyectos ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: var(--azul-movistar);
+  color: white;
+}
+
+/* ===== Skills ===== */
+.articulo ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.articulo li {
+  background-color: var(--azul-movistar);
+  color: white;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 4px;
+}
+
+/* ===== Contenedor de Artículos Horizontal ===== */
+.articulo1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: var(--gris-suave);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Animación artículos ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.articulo1 article {
+  background-color: white;
+  width: 280px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.2s ease-in-out;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.articulo1 article:hover {
+  transform: translateY(-5px);
+}
+
+.articulo1 img {
+  max-width: 70%;
+  margin: 0 auto 20px;
+  display: block;
+  height: auto;
+}
+
+/* ===== Formulario ===== */
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form .boton {
+  background-color: var(--azul-movistar);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form .boton:hover {
+  background-color: var(--azul-oscuro);
+}
+
+/* ===== Redes Sociales ===== */
+.redes img {
+  width: 40px;
+  margin-right: 10px;
+  transition: transform 0.2s;
+}
+
+.redes img:hover {
+  transform: scale(1.1);
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px;
+  background-color: var(--azul-oscuro);
+  color: white;
+}
+#aboutme {
+  background-color: var(--gris-suave);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+#aboutme img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%; /* forma circular */
+  display: block;
+  margin: 20px auto;
+  animation: fadeZoomIn 15s ease forwards;
+  opacity: 0;
+}
+footer a {
+  color: var(--azul-movistar);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Responsive: Móviles ===== */
+@media (max-width: 480px) {
+  body {
+    padding: 20px 10px;
+    background-color: var(--azul-oscuro);
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+
+  .articulo1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .articulo1 article {
+    width: 90%;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  input,
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #resultado {
+    font-size: 16px;
+  }
+}
+
+/* ===== Responsive: Tablets ===== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  form {
+    max-width: 90%;
+  }
+
+  input,
+  button {
+    font-size: 15px;
+  }
+
+  #resultado {
+    font-size: 17px;
+  }
+}
